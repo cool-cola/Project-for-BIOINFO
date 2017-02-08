@@ -2,17 +2,16 @@
 #include "DeBruijnGraph.h"
 #include "PairEndInfo.h"
 
-GeneAssemble::CScaffold::CScaffold() : 
+GeneAssemble::CScaffold::CScaffold() :
+	m_pDeBruijnGraph(nullptr),
 	m_pConfig(nullptr),
 	m_LongNodeCutoff(LONG_NODE_CUTOFF),
 	m_UnreliableConnectionCutoff(UNRELIABLE_CONNECTION_CUTOFF)
 {
-	m_pDeBruijnGraph = new CDeBruijnGraph();
 }
 
 GeneAssemble::CScaffold::~CScaffold()
 {
-	delete m_pDeBruijnGraph;
 	delete m_pConfig;
 }
 
@@ -111,7 +110,7 @@ unsigned int GeneAssemble::CScaffold::findOppositeLongNode(unsigned int vSourceN
 	int Count = 0;
 	for (auto Iter : m_Scaffold[vSourceNode])
 	{
-		if (Iter.m_IsReliable && (*m_pDeBruijnGraph)[Iter.m_NodeID].getNodeLength() > m_LongNodeCutoff)
+		if (Iter.m_Count > 1 && (*m_pDeBruijnGraph)[Iter.m_NodeID].getNodeLength() > m_LongNodeCutoff)
 		{
 			++Count;
 			Result = Iter.m_NodeID;

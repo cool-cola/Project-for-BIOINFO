@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{33cdc941-601f-4021-94d0-a15a72b3d232}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{20cd6dcb-e8e9-41b8-937b-20a04c6e6118}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BioUtilityExports.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="BioUtilityInterface.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalSearch.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonSequenceJudger.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BioUtilityInterface.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalSearch.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonSequenceJudger.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

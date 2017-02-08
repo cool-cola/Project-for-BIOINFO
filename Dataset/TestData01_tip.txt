@@ -1,0 +1,8 @@
+>SEQUENCE_0_length_10
+
+GATATAGG
+>SEQUENCE_1_length_10
+CACATGA
+>SEQUENCE_2_length_10
+
+CATAGG

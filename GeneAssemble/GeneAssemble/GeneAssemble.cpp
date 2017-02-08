@@ -53,12 +53,17 @@ void GeneAssemble::CGeneAssemble::assembleGene(const std::vector<std::string>& v
  	
 	m_pDeBruijnGraph->exportDeBruijnGraph("Remove Bubbles");
 
+	Start = clock();//for test
 	m_pRemoveErrors->removeErroneousConnections();
+	End = clock();//for test
+	std::cout << "remove erroneous connections : " << End - Start << std::endl;//for test
+
 	m_pDeBruijnGraph->exportDeBruijnGraph("Remove Erroneous Connections");
 
-	//m_DeBruijnGraph->simplifyDeBruijnGraph();
-	//m_DeBruijnGraph->exportDeBruijnGraph("Simplify After Erroneous Connections");
+	Start = clock();//for test
+	m_pRemoveErrors->removeRepeats();
+	End = clock();//for test
+	std::cout << "remove repeats : " << End - Start << std::endl;//for test
 
-	//m_RemoveErrors->removeRepeats();
-	//m_DeBruijnGraph->exportDeBruijnGraph("Remove Repeats");
+	m_pDeBruijnGraph->exportDeBruijnGraph("Remove Repeats");
 }

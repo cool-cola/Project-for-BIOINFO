@@ -5,16 +5,15 @@
 GeneAssemble::CRemoveErrors::CRemoveErrors() :  
 	m_SingleBubblePathLen(SINGLE_BUBBLE_PATH_LEN), 
 	m_MaxBubbleNodeNum(MAX_BUBBLE_NODE_NUM), 
-	m_MinPathSimilarity(MIN_PATH_SIMILARITY), 
+	m_MinPathSimilarity(MIN_PATH_SIMILARITY),
+	m_pDeBruijnGraph(nullptr),
 	m_pConfig(nullptr),
 	m_BubbleProgress(0)
 {
-	m_pDeBruijnGraph = new CDeBruijnGraph();
 }
 
 GeneAssemble::CRemoveErrors::~CRemoveErrors()
 {
-	delete m_pDeBruijnGraph;
 	delete m_pConfig;
 
 	__clearBubbleMap();

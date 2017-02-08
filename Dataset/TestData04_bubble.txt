@@ -1,0 +1,9 @@
+>SEQUENCE_0_length_10
+
+ACTC
+>SEQUENCE_0_length_10
+
+ACTAAACGA
+>SEQUENCE_0_length_10
+
+ACTAAGGCGA

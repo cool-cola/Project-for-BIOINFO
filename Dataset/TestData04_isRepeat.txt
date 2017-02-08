@@ -1,0 +1,6 @@
+>SEQUENCE_0_length_10
+
+AAGCA
+>SEQUENCE_0_length_10
+
+CAGCC

@@ -89,6 +89,7 @@ void GENE_ASSEMBLE_DLL_EXPORT GeneAssemble::parseGeneConfig(const std::string& v
 
 	_ASSERT(pConfig);
 	CGeneAssemble::getInstance()->setConfig(pConfig);
+	delete pConfig;
 }
 
 //*************************************************************************
